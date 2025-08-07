@@ -43,14 +43,26 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <span class="brand-text">HOÀNG</span>
-                <div class="brand-glow"></div>
+                <div class="brand-logo-container">
+                    <div class="brand-logo">
+                        <div class="logo-inner">
+                            <span class="logo-text">BH</span>
+                        </div>
+                        <div class="logo-dot"></div>
+                    </div>
+                </div>
+                <div class="brand-text-container">
+                    <span class="brand-name">Bá Hoàng</span>
+                    <span class="brand-title">Game Developer</span>
+                </div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Trang chủ</a></li>
                 <li><a href="#about" class="nav-link">Giới thiệu</a></li>
                 <li><a href="#education" class="nav-link">Học tập</a></li>
                 <li><a href="#hobbies" class="nav-link">Sở thích</a></li>
+                <li><a href="#favorite-games" class="nav-link">Game Yêu Thích</a></li>
+                <li><a href="#fun-facts" class="nav-link">Fun Facts</a></li>
                 <li><a href="#contact" class="nav-link">Liên hệ</a></li>
             </ul>
             <div class="nav-controls">
@@ -84,10 +96,10 @@
                 </div>
                 <h1 class="hero-title">
                     <span class="title-line">Nguyễn Bá Hoàng</span>
-                    <span class="title-subtitle">Game Developer</span>
+                    <span class="title-subtitle">&lt;Game Developer/&gt;</span>
                 </h1>
                 <p class="hero-description">
-                    Sinh viên lập trình game tại VTC Academy Đà Nẵng
+                    📍 Quảng Nam • 🎂 20/06/2002 • 🎓 VTC Academy
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -104,10 +116,23 @@
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="#about" class="cta-button">
-                        <span>Khám Phá</span>
-                        <div class="button-glow"></div>
-                    </a>
+                    <div class="cta-buttons">
+                        <a href="#about" class="cta-button primary">
+                            <i class="fas fa-user"></i>
+                            <span>Giới Thiệu</span>
+                            <div class="button-glow"></div>
+                        </a>
+                        <a href="#favorite-games" class="cta-button secondary">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Game Yêu Thích</span>
+                            <div class="button-glow"></div>
+                        </a>
+                        <a href="#contact" class="cta-button tertiary">
+                            <i class="fas fa-envelope"></i>
+                            <span>Liên Hệ</span>
+                            <div class="button-glow"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -120,15 +145,30 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-paragraph">
-                        Xin chào! Tôi là <strong>Nguyễn Bá Hoàng</strong>, sinh ngày 20/06/2002 tại Quảng Nam. 
-                        Hiện tại tôi đang theo học chuyên ngành lập trình game tại <strong>VTC Academy Đà Nẵng</strong>.
-                    </p>
-                    <p class="about-paragraph">
-                        Với đam mê mãnh liệt về công nghệ và sáng tạo, tôi luôn tìm kiếm những thách thức mới 
-                        trong lĩnh vực phát triển game. Mục tiêu của tôi là tạo ra những trải nghiệm gaming 
-                        độc đáo và thú vị cho người chơi.
-                    </p>
+                    <div class="intro-frame">
+                        <div class="intro-content">
+                            <p class="about-paragraph">
+                                Xin chào! Tôi là <strong>Nguyễn Bá Hoàng</strong>, sinh ngày 20/06/2002 tại Quảng Nam. 
+                                Hiện tại tôi đang theo học chuyên ngành lập trình game tại <strong>VTC Academy Đà Nẵng</strong>.
+                            </p>
+                            <p class="about-paragraph">
+                                Với đam mê mãnh liệt về công nghệ và sáng tạo, tôi luôn tìm kiếm những thách thức mới 
+                                trong lĩnh vực phát triển game. Mục tiêu của tôi là tạo ra những trải nghiệm gaming 
+                                độc đáo và thú vị cho người chơi.
+                            </p>
+                            <div class="motto-section">
+                                <div class="motto-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <blockquote class="motto-text">
+                                    "The greatest genius is effort"
+                                </blockquote>
+                                <div class="motto-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <i class="fas fa-gamepad"></i>
@@ -158,27 +198,32 @@
                             </div>
                             <span class="window-title">hoang.cpp</span>
                         </div>
-                        <div class="window-content">
-                            <pre style="font-family:monospace;color: rgb(197, 200, 198); font-weight: 400; "><span style="color: rgb(129, 162, 190); font-weight: 400;">class</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">GameDeveloper</span> {
-<span style="color: rgb(129, 162, 190); font-weight: 400;">private</span>:
-    std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> name;
-    <span style="color: rgb(222, 147, 95); font-weight: 400;">int</span> birthYear;
-    std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> location;
-    std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> motto;
+                                                <div class="window-content">
+                            <pre style="font-family:monospace;color: rgb(197, 200, 198); font-weight: 400; white-space: pre-wrap; overflow-x: auto;"><span style="color: rgb(129, 162, 190); font-weight: 400;">class</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">GameDeveloper</span> {
+    <span style="color: rgb(129, 162, 190); font-weight: 400;">private</span>:
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> name;
+        <span style="color: rgb(222, 147, 95); font-weight: 400;">int</span> birthYear;
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> location;
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> motto;
+        <span style="color: rgb(222, 147, 95); font-weight: 400;">int</span> experienceYears;
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> specialization;
 
-<span style="color: rgb(129, 162, 190); font-weight: 400;">public</span>:
-    GameDeveloper() {
-        name = <span style="color: rgb(181, 189, 104); font-weight: 400;">"Nguyễn Bá Hoàng"</span>;
-        birthYear = <span style="color: rgb(204, 102, 102); font-weight: 400;">2002</span>;
-        location = <span style="color: rgb(181, 189, 104); font-weight: 400;">"Đà Nẵng, VN"</span>;
-        motto = <span style="color: rgb(181, 189, 104); font-weight: 400;">"The greatest genius is effort"</span>;
-    }
-    
-    <span style="color: rgb(197, 200, 198); font-weight: 400;"><span style="color: rgb(129, 162, 190); font-weight: 400;">void</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">Chế Độ Ẩn</span>()</span> { <span style="color: rgb(112, 120, 128); font-weight: 400;">/* ↑ ↑ ↓ ↓ ← ← →→ */</span> }
-    std::<span style="color: rgb(197, 200, 198); font-weight: 400;"><span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">getMotto</span>()</span> { <span style="color: rgb(129, 162, 190); font-weight: 400;">return</span> motto; }
-    <span style="color: rgb(197, 200, 198); font-weight: 400;"><span style="color: rgb(222, 147, 95); font-weight: 400;">bool</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">isPassionate</span>()</span> { <span style="color: rgb(129, 162, 190); font-weight: 400;">return</span> <span style="color: rgb(204, 102, 102); font-weight: 400;">true</span>; }
-    std::<span style="color: rgb(197, 200, 198); font-weight: 400;"><span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">createGame</span>()</span> { <span style="color: rgb(112, 120, 128); font-weight: 400;">/* ... */</span> }
-};</pre>
+    <span style="color: rgb(129, 162, 190); font-weight: 400;">public</span>:
+        GameDeveloper() {
+            name = <span style="color: rgb(181, 189, 104); font-weight: 400;">"Nguyễn Bá Hoàng"</span>;
+            birthYear = <span style="color: rgb(204, 102, 102); font-weight: 400;">2002</span>;
+            location = <span style="color: rgb(181, 189, 104); font-weight: 400;">"Đà Nẵng, VN"</span>;
+            motto = <span style="color: rgb(181, 189, 104); font-weight: 400;">"The greatest genius is effort"</span>;
+            experienceYears = <span style="color: rgb(204, 102, 102); font-weight: 400;">3</span>;
+            specialization = <span style="color: rgb(181, 189, 104); font-weight: 400;">"Unity & C#"</span>;
+        }
+        <span style="color: rgb(129, 162, 190); font-weight: 400;">void</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">HiddenMode:<</span>() { <span style="color: rgb(112, 120, 128); font-weight: 400;">/* ↑ ↑ ↓ ↓ ← ← →→ */</span> }
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">getMotto</span>() { <span style="color: rgb(129, 162, 190); font-weight: 400;">return</span> motto; }
+        <span style="color: rgb(222, 147, 95); font-weight: 400;">bool</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">isPassionate</span>() { <span style="color: rgb(129, 162, 190); font-weight: 400;">return</span> <span style="color: rgb(204, 102, 102); font-weight: 400;">true</span>; }
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">createGame</span>() { <span style="color: rgb(112, 120, 128); font-weight: 400;">/* ... */</span> }
+        <span style="color: rgb(222, 147, 95); font-weight: 400;">int</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">getExperience</span>() { <span style="color: rgb(129, 162, 190); font-weight: 400;">return</span> experienceYears; }
+        std::<span style="color: rgb(222, 147, 95); font-weight: 400;">string</span> <span style="color: rgb(240, 198, 116); font-weight: 400;">getSpecialization</span>() { <span style="color: rgb(129, 162, 190); font-weight: 400;">return</span> specialization; }
+    };</pre>
                         </div>
                     </div>
                 </div>
@@ -274,6 +319,87 @@
             </div>
         </section>
 
+        <!-- Favorite Games Section -->
+        <section id="favorite-games" class="favorite-games">
+            <div class="section-header">
+                <h2 class="section-title">Game Yêu Thích</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-background" style="background-image: url('./image/lolbackground.png');"></div>
+                        <div class="game-avatar">
+                            <img src="./image/lol.png" alt="League of Legends" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Liên Minh Huyền Thoại</h3>
+                        <p class="game-description">MOBA game với gameplay chiến thuật sâu sắc và cộng đồng game thủ đông đảo.</p>
+                        <div class="game-tags">
+                            <span class="game-tag">MOBA</span>
+                            <span class="game-tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-background" style="background-image: url('./image/fortnitebackground.png');"></div>
+                        <div class="game-avatar">
+                            <img src="./image/fortnite.png" alt="Fortnite" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Fortnite</h3>
+                        <p class="game-description">Battle Royale game với cơ chế xây dựng độc đáo và đồ họa cartoon đẹp mắt.</p>
+                        <div class="game-tags">
+                            <span class="game-tag">Battle Royale</span>
+                            <span class="game-tag">Building</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-background" style="background-image: url('./image/civbackground.png');"></div>
+                        <div class="game-avatar">
+                            <img src="./image/civ6.png" alt="Civilization VI" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Civilization VI</h3>
+                        <p class="game-description">Turn-based strategy game với gameplay xây dựng đế chế và phát triển văn minh.</p>
+                        <div class="game-tags">
+                            <span class="game-tag">Strategy</span>
+                            <span class="game-tag">4X</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts Section -->
+        <section id="fun-facts" class="fun-facts">
+            <div class="section-header">
+                <h2 class="section-title">Fun Facts</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="gaming-card">
+                <h3>Fun Facts về tôi</h3>
+                <ul>
+                    <li><span></span>Có thể code 10+ giờ liên tục khi có inspiration</li>
+                    <li><span></span>Uống trung bình 5 ly cà phê mỗi ngày</li>
+                    <li><span></span>Debugging lúc 3h sáng là specialty của tôi</li>
+                    <li><span></span>Mơ ước tạo ra game viral như Among Us</li>
+                    <li><span></span>Đã từng fix bug trong 3 ngày liên tục không ngủ</li>
+                    <li><span></span>Có thể nhớ được hàng trăm dòng code thuộc lòng</li>
+                    <li><span></span>Thích nghe nhạc lofi khi code</li>
+                    <li><span></span>Đã từng tạo ra game đơn giản khi mới 15 tuổi</li>
+                    <li><span></span>Luôn mơ về việc tạo ra game thay đổi thế giới</li>
+                    <li><span></span>Có thể debug bằng cách "nói chuyện" với code</li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="section-header">
@@ -325,29 +451,63 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="brand-text">HOÀNG</span>
-                <p>Game Developer & Creative Coder</p>
+        <div class="container mx-auto">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="brand-logo-container">
+                        <div class="brand-logo">
+                            <div class="logo-inner">
+                                <span class="logo-text">BH</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="brand-name">Nguyễn Bá Hoàng</span>
+                    <p class="brand-description">Game Developer với đam mê tạo ra những trải nghiệm tuyệt vời. Học tập tại VTC Academy Đà Nẵng.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <div class="footer-links">
+                        <button onclick="document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })" class="footer-link">Giới thiệu</button>
+                        <button onclick="document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' })" class="footer-link">Học tập</button>
+                        <button onclick="document.getElementById('hobbies')?.scrollIntoView({ behavior: 'smooth' })" class="footer-link">Sở thích</button>
+                        <button onclick="document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })" class="footer-link">Liên hệ</button>
+                    </div>
+                </div>
+                
+                <!-- Connect -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="footer-links">
+                        <a href="https://github.com/anhhackta" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Profile</a>
+                        <a href="http://paypal.me/bahoang2k2" target="_blank" rel="noopener noreferrer" class="footer-link">Support Me</a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="#home">Trang chủ</a>
-                <a href="#about">Giới thiệu</a>
-                <a href="#education">Học tập</a>
-                <a href="#hobbies">Sở thích</a>
-                <a href="#contact">Liên hệ</a>
+            
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">© 2025 Nguyễn Bá Hoàng. All rights reserved.</div>
+                    <div class="made-with">
+                        <span>Made with</span>
+                        <i class="fas fa-heart"></i>
+                        <span>and</span>
+                        <i class="fas fa-code"></i>
+                        <span>and</span>
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="academy">VTC Academy Đà Nẵng</div>
+                </div>
             </div>
-            <div class="footer-social">
-                <a href="https://github.com/anhhackta" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="http://paypal.me/bahoang2k2" target="_blank" class="social-link">
-                    <i class="fab fa-paypal"></i>
-                </a>
+            
+            <!-- Floating Elements -->
+            <div class="footer-floating">
+                <div class="floating-element">⚡</div>
+                <div class="floating-element">🎮</div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Nguyễn Bá Hoàng. Made with ❤️ and lots of ☕</p>
         </div>
     </footer>
 

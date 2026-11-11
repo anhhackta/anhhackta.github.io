@@ -3,580 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nguyễn Bá Hoàng - Solo Game Developer | Portfolio anime style">
+    <meta name="description" content="Nguyễn Bá Hoàng — Solo Game Developer, Unity C#, Indie Creator. Đà Nẵng, Việt Nam.">
     <meta name="author" content="Nguyễn Bá Hoàng">
-    <meta name="theme-color" content="#ff6b6b">
-    <title>Nguyễn Bá Hoàng — Game Developer Portfolio</title>
+    <meta name="theme-color" content="#3ec6c6">
+    <meta property="og:title" content="Nguyễn Bá Hoàng — Game Developer">
+    <meta property="og:description" content="Solo Game Developer | Unity C# | Indie Creator | Đà Nẵng">
+    <meta property="og:url" content="https://anhhackta.github.io/">
+    <title>Nguyễn Bá Hoàng — Game Developer</title>
 
-    <!-- Fonts: Fraunces for grand serif, Poppins for body, Pacifico for fun -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800;9..144,900&family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,700;9..144,0,900;9..144,1,400&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23ff6b6b'/><text x='50' y='73' font-size='60' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>H</text></svg>">
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%233ec6c6'/><text x='50' y='73' font-size='60' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>H</text></svg>">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-    <!-- ===================== CUSTOM CURSOR ===================== -->
-    <div class="cursor-trail" id="cursorTrail"></div>
-    <div class="cursor-dot" id="cursorDot">
-        <div class="cursor-inner"></div>
-    </div>
+<!-- ══ CURSOR ══ -->
+<div id="cursorRing"></div>
+<div id="cursorDot"></div>
 
-    <!-- ===================== LOADING ===================== -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-wrap">
-            <div class="loading-cloud">
-                <div class="cloud-body"></div>
-                <div class="cloud-bump"></div>
-                <div class="cloud-bump small"></div>
-                <div class="cloud-bump tiny"></div>
-            </div>
-            <div class="loading-sun"></div>
-            <div class="loading-petals"></div>
-            <p class="loading-text">Đang mở cửa bảo tàng...</p>
+<!-- ══ SCROLL PROGRESS ══ -->
+<div class="scroll-bar"><div class="scroll-fill" id="scrollFill"></div></div>
+
+<!-- ══ LOADER ══ -->
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="loader-rings">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
         </div>
+        <p class="loader-name">NBH</p>
+        <p class="loader-label">LOADING...</p>
     </div>
+</div>
 
-    <!-- ===================== FLOATING DECORATIONS ===================== -->
-    <div class="floating-decorations">
-        <div class="float-shape shape-1" data-depth="0.1">✦</div>
-        <div class="float-shape shape-2" data-depth="0.2">❀</div>
-        <div class="float-shape shape-3" data-depth="0.15">✿</div>
-        <div class="float-shape shape-4" data-depth="0.25">❁</div>
-        <div class="float-shape shape-5" data-depth="0.08">✦</div>
-        <div class="float-shape shape-6" data-depth="0.3">❀</div>
-        <div class="float-shape shape-7" data-depth="0.12">✿</div>
-        <div class="float-shape shape-8" data-depth="0.2">❁</div>
+<!-- ══ NAV ══ -->
+<nav class="nav" id="nav">
+    <div class="nav-wrap">
+        <a href="#hero" class="nav-logo">
+            <span class="logo-nbh">NBH</span>
+            <span class="logo-sep">·</span>
+            <span class="logo-full">Nguyễn Bá Hoàng</span>
+        </a>
+        <ul class="nav-list" id="navList">
+            <li><a href="#hero"     class="nl active">Trang chủ</a></li>
+            <li><a href="#about"    class="nl">Về tôi</a></li>
+            <li><a href="#skills"   class="nl">Kỹ năng</a></li>
+            <li><a href="#journey"  class="nl">Hành trình</a></li>
+            <li><a href="#projects" class="nl">Dự án</a></li>
+            <li><a href="#contact"  class="nl">Liên hệ</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Thuê tôi <i class="fas fa-arrow-right"></i></a>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
+</nav>
 
-    <!-- ===================== SCROLL PROGRESS ===================== -->
-    <div class="scroll-progress-track">
-        <div class="scroll-progress-fill" id="scrollFill"></div>
-    </div>
+<!-- ══════════════════════════════════════
+     HERO — Stellasora split layout
+══════════════════════════════════════ -->
+<section id="hero" class="hero">
 
-    <!-- ===================== NAVIGATION ===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="#top" class="nav-brand">
-                <span class="brand-icon">🏰</span>
-                <span class="brand-text">Hoàng's Gallery</span>
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#top" class="nav-link active">Trang chủ</a></li>
-                <li><a href="#about" class="nav-link">Về tôi</a></li>
-                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
-                <li><a href="#journey" class="nav-link">Hành trình</a></li>
-                <li><a href="#projects" class="nav-link">Dự án</a></li>
-                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+    <!-- Parallax BG layers -->
+    <div class="hero-bg">
+        <div class="hbg-sky"></div>
+        <div class="hbg-blobs">
+            <div class="blob b1"></div>
+            <div class="blob b2"></div>
+            <div class="blob b3"></div>
         </div>
-    </nav>
-
-    <!-- ===================== HERO ===================== -->
-    <section id="top" class="hero">
-        <!-- Parallax background layers -->
-        <div class="hero-parallax">
-            <div class="layer-sky" data-depth="0.05"></div>
-            <div class="layer-clouds" data-depth="0.1">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="cloud cloud-4"></div>
-            </div>
-            <!-- Layer buildings — SVG European silhouettes -->
-        <div class="layer-buildings" data-depth="0.18">
-            <svg class="buildings-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Far left: gothic spire -->
-                <g opacity="0.13" fill="#ff6b6b">
-                    <polygon points="40,320 40,160 55,100 70,160 70,320"/>
-                    <rect x="30" y="180" width="50" height="140"/>
-                    <rect x="38" y="195" width="12" height="18" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="58" y="195" width="12" height="18" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="38" y="230" width="12" height="18" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="58" y="230" width="12" height="18" fill="rgba(255,217,61,0.6)"/>
+        <div class="hbg-grid"></div>
+        <div class="hbg-buildings" data-parallax="0.15">
+            <svg viewBox="0 0 1440 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Gothic spire L -->
+                <g fill="rgba(62,130,200,0.1)">
+                    <polygon points="60,400 60,200 80,120 100,200 100,400"/>
+                    <rect x="48" y="230" width="16" height="22" rx="8" fill="rgba(220,230,250,0.6)"/>
+                    <rect x="78" y="230" width="16" height="22" rx="8" fill="rgba(220,230,250,0.6)"/>
                 </g>
-                <!-- Left dome building (baroque) -->
-                <g opacity="0.1" fill="#a55eea">
-                    <rect x="100" y="210" width="120" height="110"/>
-                    <ellipse cx="160" cy="210" rx="60" ry="50"/>
-                    <rect x="130" y="150" width="10" height="60"/>
-                    <rect x="175" y="160" width="10" height="50"/>
-                    <rect x="118" y="230" width="18" height="25" fill="rgba(255,217,61,0.5)"/>
-                    <rect x="143" y="230" width="18" height="25" fill="rgba(255,217,61,0.5)"/>
-                    <rect x="168" y="230" width="18" height="25" fill="rgba(255,217,61,0.5)"/>
-                    <rect x="193" y="230" width="18" height="25" fill="rgba(255,217,61,0.5)"/>
+                <!-- Dome L -->
+                <g fill="rgba(91,130,210,0.08)">
+                    <rect x="140" y="260" width="130" height="140"/>
+                    <ellipse cx="205" cy="260" rx="65" ry="55"/>
+                    <rect x="155" y="285" width="20" height="28" rx="10" fill="rgba(220,230,250,0.5)"/>
+                    <rect x="183" y="285" width="20" height="28" rx="10" fill="rgba(220,230,250,0.5)"/>
+                    <rect x="211" y="285" width="20" height="28" rx="10" fill="rgba(220,230,250,0.5)"/>
                 </g>
-                <!-- Center: grand palace / cathedral -->
-                <g opacity="0.12" fill="#ff6b6b">
-                    <rect x="520" y="180" width="400" height="140"/>
-                    <!-- Center dome -->
-                    <ellipse cx="720" cy="180" rx="80" ry="70"/>
-                    <rect x="705" y="90" width="30" height="90"/>
-                    <!-- Side towers -->
-                    <rect x="520" y="150" width="60" height="170"/>
-                    <polygon points="520,150 550,90 580,150"/>
-                    <rect x="860" y="150" width="60" height="170"/>
-                    <polygon points="860,150 890,90 920,150"/>
-                    <!-- Windows row -->
-                    <rect x="545" y="170" width="22" height="30" rx="11" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="590" y="170" width="22" height="30" rx="11" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="635" y="170" width="22" height="30" rx="11" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="775" y="170" width="22" height="30" rx="11" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="820" y="170" width="22" height="30" rx="11" fill="rgba(255,217,61,0.6)"/>
-                    <rect x="865" y="170" width="22" height="30" rx="11" fill="rgba(255,217,61,0.6)"/>
-                    <!-- Grand door -->
-                    <rect x="698" y="260" width="44" height="60" rx="22" fill="rgba(255,217,61,0.4)"/>
+                <!-- Grand palace center -->
+                <g fill="rgba(62,130,200,0.09)">
+                    <rect x="500" y="220" width="440" height="180"/>
+                    <ellipse cx="720" cy="220" rx="90" ry="80"/>
+                    <rect x="703" y="110" width="34" height="110"/>
+                    <rect x="500" y="185" width="65" height="215"/><polygon points="500,185 532,105 565,185"/>
+                    <rect x="875" y="185" width="65" height="215"/><polygon points="875,185 907,105 940,185"/>
+                    <rect x="696" y="300" width="48" height="100" rx="24" fill="rgba(220,230,250,0.5)"/>
+                    <rect x="530" y="215" width="24" height="34" rx="12" fill="rgba(220,230,250,0.6)"/>
+                    <rect x="572" y="215" width="24" height="34" rx="12" fill="rgba(220,230,250,0.6)"/>
+                    <rect x="820" y="215" width="24" height="34" rx="12" fill="rgba(220,230,250,0.6)"/>
+                    <rect x="862" y="215" width="24" height="34" rx="12" fill="rgba(220,230,250,0.6)"/>
                 </g>
-                <!-- Right: baroque tower -->
-                <g opacity="0.1" fill="#4ecdc4">
-                    <rect x="1200" y="200" width="120" height="120"/>
-                    <ellipse cx="1260" cy="200" rx="60" ry="45"/>
-                    <rect x="1245" y="140" width="30" height="60"/>
-                    <!-- windows -->
-                    <rect x="1215" y="220" width="20" height="28" rx="10" fill="rgba(255,217,61,0.5)"/>
-                    <rect x="1245" y="220" width="20" height="28" rx="10" fill="rgba(255,217,61,0.5)"/>
-                    <rect x="1275" y="220" width="20" height="28" rx="10" fill="rgba(255,217,61,0.5)"/>
-                    <rect x="1305" y="220" width="20" height="28" rx="10" fill="rgba(255,217,61,0.5)"/>
+                <!-- Dome R -->
+                <g fill="rgba(80,160,220,0.08)">
+                    <rect x="1150" y="250" width="130" height="150"/>
+                    <ellipse cx="1215" cy="250" rx="65" ry="50"/>
+                    <rect x="1165" y="275" width="20" height="28" rx="10" fill="rgba(220,230,250,0.5)"/>
+                    <rect x="1193" y="275" width="20" height="28" rx="10" fill="rgba(220,230,250,0.5)"/>
+                    <rect x="1221" y="275" width="20" height="28" rx="10" fill="rgba(220,230,250,0.5)"/>
                 </g>
-                <!-- Far right: spire -->
-                <g opacity="0.13" fill="#ffd93d">
-                    <rect x="1360" y="200" width="60" height="120"/>
-                    <polygon points="1360,200 1390,110 1420,200"/>
-                    <rect x="1370" y="220" width="14" height="20" fill="rgba(255,107,107,0.5)"/>
-                    <rect x="1395" y="220" width="14" height="20" fill="rgba(255,107,107,0.5)"/>
+                <!-- Spire R -->
+                <g fill="rgba(160,174,212,0.1)">
+                    <rect x="1340" y="240" width="65" height="160"/>
+                    <polygon points="1340,240 1372,140 1405,240"/>
                 </g>
-                <!-- Ground hills -->
-                <path d="M0,320 Q200,280 400,310 Q600,340 720,295 Q840,250 1000,300 Q1200,350 1440,290 L1440,320 Z" fill="rgba(255,107,107,0.08)"/>
-                <path d="M0,320 Q300,300 600,315 Q900,330 1200,308 Q1350,300 1440,312 L1440,320 Z" fill="rgba(255,217,61,0.07)"/>
+                <!-- Ground wave -->
+                <path d="M0,400 Q360,360 720,370 Q1080,380 1440,355 L1440,400Z" fill="rgba(62,130,200,0.06)"/>
             </svg>
         </div>
-            <div class="layer-ground" data-depth="0.3"></div>
-        <!-- Sakura petals layer -->
-        <div class="layer-petals">
-            <span class="petal p1">🌸</span>
-            <span class="petal p2">🌸</span>
-            <span class="petal p3">🌸</span>
-            <span class="petal p4">🍃</span>
-            <span class="petal p5">🌸</span>
-            <span class="petal p6">✿</span>
-            <span class="petal p7">🌸</span>
-            <span class="petal p8">🍃</span>
+        <div class="hbg-petals">
+            <span class="p">✦</span><span class="p">✧</span><span class="p">✦</span>
+            <span class="p">❄</span><span class="p">✦</span><span class="p">✧</span>
+            <span class="p">✦</span><span class="p">❄</span>
         </div>
-        <!-- Sun -->
-        <div class="layer-sun">
-            <div class="sun-body">
-                <div class="sun-ray"></div><div class="sun-ray"></div>
-                <div class="sun-ray"></div><div class="sun-ray"></div>
-                <div class="sun-ray"></div><div class="sun-ray"></div>
-                <div class="sun-ray"></div><div class="sun-ray"></div>
+        <div class="hbg-sun">
+            <div class="sun-core"></div>
+            <div class="sun-halo"></div>
+            <div class="sun-rays">
+                <div class="sr"></div><div class="sr"></div><div class="sr"></div>
+                <div class="sr"></div><div class="sr"></div><div class="sr"></div>
+                <div class="sr"></div><div class="sr"></div>
             </div>
         </div>
-        </div>
+    </div>
 
-        <div class="hero-content">
-            <div class="hero-greeting reveal-up">
-                <span class="greeting-badge">
-                    <i class="fas fa-sparkles"></i> Xin chào, tôi là
-                </span>
+    <!-- SPLIT CONTENT -->
+    <div class="hero-split">
+
+        <!-- LEFT: Text panel -->
+        <div class="hero-text">
+            <!-- Eyebrow row like stellasora -->
+            <div class="h-eyebrow" data-anime="fadeUp" data-delay="0">
+                <div class="eyebrow-tags">
+                    <span class="etag"><i class="fas fa-gamepad"></i> Solo Dev</span>
+                    <span class="etag teal"><i class="fab fa-unity"></i> Unity C#</span>
+                </div>
+                <div class="eyebrow-loc">
+                    <i class="fas fa-map-marker-alt"></i> Đà Nẵng, VN
+                </div>
             </div>
-            <h1 class="hero-name reveal-up" data-delay="0.1">
-                Nguyễn Bá Hoàng
+
+            <!-- BIG NAME -->
+            <h1 class="h-name" data-anime="fadeUp" data-delay="100">
+                <span class="name-line n1">Nguyễn</span>
+                <span class="name-line n2">Bá Hoàng</span>
             </h1>
-            <div class="hero-subtitle reveal-up" data-delay="0.2">
-                <span class="subtitle-text">Solo Game Developer</span>
-                <span class="subtitle-divider">✦</span>
-                <span class="subtitle-text">Unity C# Developer</span>
-                <span class="subtitle-divider">✦</span>
-                <span class="subtitle-text">Indie Creator</span>
+
+            <!-- Quote bar like stellasora character quote -->
+            <div class="h-quote" data-anime="fadeUp" data-delay="200">
+                <i class="fas fa-quote-left"></i>
+                <span>Mỗi dòng code là một bước đến gần hơn với ước mơ.</span>
             </div>
-            <p class="hero-desc reveal-up" data-delay="0.3">
-                Biến niềm đam mê game thành sự nghiệp. Mỗi dòng code là một nét vẽ,
-                mỗi dự án là một tác phẩm. Tầm nhìn lớn nhất: tạo ra AAA game đầu tiên
-                của Việt Nam về lịch sử dân tộc. 🏯
+
+            <!-- Role chips -->
+            <div class="h-roles" data-anime="fadeUp" data-delay="300">
+                <span class="role-chip rc1">🎮 Game Design</span>
+                <span class="role-chip rc2">💻 Web Dev</span>
+                <span class="role-chip rc3">🏯 Lịch sử VN</span>
+                <span class="role-chip rc4">🎧 Indie Creator</span>
+            </div>
+
+            <!-- Desc -->
+            <p class="h-desc" data-anime="fadeUp" data-delay="400">
+                Sinh 20/06/2002, lớn lên với niềm đam mê game và ước mơ
+                tạo ra tựa AAA game Việt Nam đầu tiên về lịch sử dân tộc. 🏯
             </p>
-            <div class="hero-actions reveal-up" data-delay="0.4">
-                <a href="#projects" class="btn btn-primary">
-                    <span>Khám phá gallery</span>
-                    <i class="fas fa-arrow-right"></i>
+
+            <!-- CTA -->
+            <div class="h-cta" data-anime="fadeUp" data-delay="500">
+                <a href="#projects" class="btn-main">
+                    Khám phá dự án <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#contact" class="btn btn-ghost">
-                    <span>Hãy nói chuyện</span>
-                </a>
+                <a href="#contact" class="btn-line">Liên hệ ngay</a>
             </div>
-            <div class="hero-socials reveal-up" data-delay="0.5">
-                <a href="https://github.com/anhhackta" target="_blank" rel="noopener" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.facebook.com/anhhackta.official" target="_blank" rel="noopener" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.youtube.com/@anhhackta" target="_blank" rel="noopener" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="mailto:bahoangcran@gmail.com" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+
+            <!-- Socials -->
+            <div class="h-socials" data-anime="fadeUp" data-delay="600">
+                <a href="https://github.com/anhhackta"                  target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/anhhackta.official"   target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@anhhackta"            target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:bahoangcran@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
 
-        <div class="scroll-hint">
-            <div class="scroll-arrow"></div>
-            <span>Cuộn để khám phá</span>
-        </div>
-    </section>
+        <!-- RIGHT: Visual card like stellasora character panel -->
+        <div class="hero-card" data-anime="slideRight" data-delay="200">
+            <!-- Decorative diagonal bg slice -->
+            <div class="hcard-bg">
+                <div class="hcard-slice"></div>
+                <div class="hcard-dots"></div>
+                <div class="hcard-circle c1"></div>
+                <div class="hcard-circle c2"></div>
+            </div>
 
-    <!-- ===================== ABOUT ===================== -->
-    <section id="about" class="about">
-        <div class="section-banner reveal-up">
-            <span class="banner-emoji">🌸</span>
-            <span class="banner-label">VỀ TÔI</span>
-            <span class="banner-emoji">🌸</span>
-        </div>
-        <h2 class="section-heading reveal-up" data-delay="0.1">
-            Câu chuyện của <span class="accent-text">một dreamer</span>
-        </h2>
-
-        <div class="about-grid">
-            <!-- Left: Portrait card -->
-            <div class="about-portrait reveal-side" data-side="left">
-                <div class="portrait-card">
-                    <div class="portrait-frame">
-                        <div class="portrait-emoji">🎮</div>
-                        <div class="portrait-orbit">
-                            <div class="orbit-dot d1">⚡</div>
-                            <div class="orbit-dot d2">🎯</div>
-                            <div class="orbit-dot d3">🏯</div>
-                            <div class="orbit-dot d4">🎧</div>
-                        </div>
-                    </div>
-                    <div class="portrait-info">
-                        <div class="info-row">
-                            <span class="info-icon">🎂</span>
-                            <span class="info-label">Sinh nhật</span>
-                            <span class="info-value">20/06/2002</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon">📍</span>
-                            <span class="info-label">Vị trí</span>
-                            <span class="info-value">Đà Nẵng, Việt Nam</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon">🎮</span>
-                            <span class="info-label">Chuyên môn</span>
-                            <span class="info-value">Unity & C#</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon">💌</span>
-                            <span class="info-label">Liên hệ</span>
-                            <span class="info-value">bahoangcran@gmail.com</span>
-                        </div>
+            <!-- Character avatar area -->
+            <div class="hcard-char">
+                <div class="char-glow-ring"></div>
+                <div class="char-avatar">
+                    <div class="avatar-emoji">🧑‍💻</div>
+                    <div class="avatar-sparks">
+                        <span class="ask a1">✦</span>
+                        <span class="ask a2">✦</span>
+                        <span class="ask a3">✦</span>
+                        <span class="ask a4">★</span>
+                        <span class="ask a5">✦</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Text content -->
-            <div class="about-text reveal-side" data-side="right">
-                <p class="about-lead">
-                    Tôi là <strong>Nguyễn Bá Hoàng</strong>, hay còn được biết đến với nickname
-                    <strong>Angry HoàngX</strong> hoặc <strong>anhhackta</strong>.
+            <!-- Info chips floating — like stellasora CV info -->
+            <div class="hcard-chips">
+                <div class="hchip c-top-left">
+                    <i class="fab fa-unity"></i> Unity Developer
+                </div>
+                <div class="hchip c-mid-right">
+                    <span class="online-dot"></span> Open to Work
+                </div>
+                <div class="hchip c-bot-left">
+                    <i class="fas fa-birthday-cake"></i> 20/06/2002
+                </div>
+            </div>
+
+            <!-- Page number like stellasora "02" vertical -->
+            <div class="hcard-num">01</div>
+
+            <!-- Mini stats bar at bottom of card -->
+            <div class="hcard-stats">
+                <div class="hcstat">
+                    <span class="hcstat-n">5+</span>
+                    <span class="hcstat-l">Năm</span>
+                </div>
+                <div class="hcstat-div"></div>
+                <div class="hcstat">
+                    <span class="hcstat-n">10+</span>
+                    <span class="hcstat-l">Dự án</span>
+                </div>
+                <div class="hcstat-div"></div>
+                <div class="hcstat">
+                    <span class="hcstat-n">∞</span>
+                    <span class="hcstat-l">Đam mê</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Cuộn xuống</span>
+    </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+        <span>🎮 Game Developer</span><span class="mx">✦</span>
+        <span>🔥 Unity C#</span><span class="mx">✦</span>
+        <span>🏯 Vietnamese History</span><span class="mx">✦</span>
+        <span>🎨 Indie Creator</span><span class="mx">✦</span>
+        <span>🌸 AntChill Studio</span><span class="mx">✦</span>
+        <span>📍 Đà Nẵng, VN</span><span class="mx">✦</span>
+        <span>💼 Open to Work</span><span class="mx">✦</span>
+        <span>⚡ CopyLoad Ext.</span><span class="mx">✦</span>
+        <!-- duplicate -->
+        <span>🎮 Game Developer</span><span class="mx">✦</span>
+        <span>🔥 Unity C#</span><span class="mx">✦</span>
+        <span>🏯 Vietnamese History</span><span class="mx">✦</span>
+        <span>🎨 Indie Creator</span><span class="mx">✦</span>
+        <span>🌸 AntChill Studio</span><span class="mx">✦</span>
+        <span>📍 Đà Nẵng, VN</span><span class="mx">✦</span>
+        <span>💼 Open to Work</span><span class="mx">✦</span>
+        <span>⚡ CopyLoad Ext.</span><span class="mx">✦</span>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" class="about sec">
+    <div class="sec-inner">
+
+        <!-- Section label -->
+        <div class="sec-label" data-anime="fadeUp">
+            <span class="sl-line"></span>
+            <span class="sl-text">VỀ TÔI</span>
+            <span class="sl-emoji">🌸</span>
+        </div>
+
+        <h2 class="sec-title" data-anime="fadeUp" data-delay="80">
+            Câu chuyện của<br><em>một dreamer</em>
+        </h2>
+
+        <!-- ABOUT asymmetric grid: portrait sticky left, text scroll right -->
+        <div class="about-grid">
+
+            <!-- LEFT sticky portrait -->
+            <div class="ab-portrait" data-anime="slideLeft">
+                <div class="portrait-wrap">
+                    <div class="portrait-ring ring-outer"></div>
+                    <div class="portrait-ring ring-inner"></div>
+                    <div class="portrait-core">
+                        <div class="portrait-emoji">🎮</div>
+                        <!-- Orbiting icons -->
+                        <div class="orbit-track">
+                            <span class="orb o1">⚡</span>
+                            <span class="orb o2">🎯</span>
+                            <span class="orb o3">🏯</span>
+                            <span class="orb o4">🎧</span>
+                        </div>
+                    </div>
+                    <!-- Info pills -->
+                    <div class="portrait-info">
+                        <div class="pi-row"><span>🎂</span><b>20/06/2002</b></div>
+                        <div class="pi-row"><span>📍</span><b>Đà Nẵng, Việt Nam</b></div>
+                        <div class="pi-row"><span>🎮</span><b>Unity & C#</b></div>
+                        <div class="pi-row"><span>💌</span><b>bahoangcran@gmail.com</b></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT text with stagger -->
+            <div class="ab-text">
+                <p class="ab-lead" data-anime="fadeUp">
+                    Tôi là <strong>Nguyễn Bá Hoàng</strong>, alias
+                    <strong>Angry HoàngX</strong> / <strong>anhhackta</strong>.
                 </p>
-                <p>
+                <p data-anime="fadeUp" data-delay="80">
                     Từ nhỏ đã yêu thích game, giờ tôi biến niềm đam mê đó thành công việc.
                     Mỗi dòng code là một bước đến gần hơn với ước mơ — và ước mơ đó lớn lắm.
                 </p>
-                <p>
+                <p data-anime="fadeUp" data-delay="160">
                     Tôi đam mê <strong>game design</strong>, <strong>narrative systems</strong>,
-                    và đặc biệt là việc kết hợp <strong>lịch sử Việt Nam</strong> vào các sản phẩm game.
-                    Mục tiêu lớn nhất: tiên phong tạo ra tựa game <strong>AAA</strong> đầu tiên của
-                    Việt Nam dựa trên nền tảng lịch sử và văn hóa dân tộc.
+                    và đặc biệt kết hợp <strong>lịch sử Việt Nam</strong> vào game.
+                    Mục tiêu lớn nhất: tiên phong tạo ra tựa <strong>AAA game</strong> đầu tiên
+                    của Việt Nam về lịch sử và văn hóa dân tộc.
                 </p>
 
-                <div class="about-tags">
-                    <div class="tag-pill"><span>🎨</span> Solo Indie Developer</div>
-                    <div class="tag-pill"><span>⚔️</span> Unity & C# Expert</div>
-                    <div class="tag-pill"><span>🏯</span> Vietnamese History</div>
-                    <div class="tag-pill"><span>🎧</span> Chill Music Lover</div>
+                <!-- Tag pills stagger -->
+                <div class="ab-tags" data-anime="fadeUp" data-delay="240">
+                    <span class="ab-tag">🎨 Solo Indie Dev</span>
+                    <span class="ab-tag">⚔️ Unity & C#</span>
+                    <span class="ab-tag">🏯 Lịch sử VN</span>
+                    <span class="ab-tag">🎧 Chill Music</span>
+                    <span class="ab-tag">☕ Coffee Addict</span>
                 </div>
 
-                <div class="quote-card">
-                    <div class="quote-mark">"</div>
-                    <p>Are we living 365 days… or 1 day × 365?</p>
-                </div>
+                <!-- Quote -->
+                <blockquote class="ab-quote" data-anime="fadeUp" data-delay="320">
+                    <span class="bq-mark">"</span>
+                    Are we living 365 days… or 1 day × 365?
+                </blockquote>
 
-                <div class="status-pill">
-                    <span class="status-glow"></span>
-                    Đang tìm kiếm cơ hội trong Game Development (remote hoặc onsite)
+                <!-- Status -->
+                <div class="ab-status" data-anime="fadeUp" data-delay="400">
+                    <span class="online-dot"></span>
+                    Đang tìm kiếm cơ hội Game Development (remote / onsite)
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ===================== MARQUEE BAND ===================== -->
-    <div class="marquee-band" aria-hidden="true">
-        <div class="marquee-track">
-            <span class="marquee-item"><span>🎮</span> Game Developer</span>
-            <span class="marquee-item"><span>✦</span> Unity C#</span>
-            <span class="marquee-item"><span>🏯</span> Vietnamese History</span>
-            <span class="marquee-item"><span>✦</span> Indie Creator</span>
-            <span class="marquee-item"><span>🎨</span> AntChill Studio</span>
-            <span class="marquee-item"><span>✦</span> Đà Nẵng, VN</span>
-            <span class="marquee-item"><span>🌸</span> Open to Work</span>
-            <span class="marquee-item"><span>✦</span> CopyLoad Extension</span>
-            <!-- duplicate for seamless loop -->
-            <span class="marquee-item"><span>🎮</span> Game Developer</span>
-            <span class="marquee-item"><span>✦</span> Unity C#</span>
-            <span class="marquee-item"><span>🏯</span> Vietnamese History</span>
-            <span class="marquee-item"><span>✦</span> Indie Creator</span>
-            <span class="marquee-item"><span>🎨</span> AntChill Studio</span>
-            <span class="marquee-item"><span>✦</span> Đà Nẵng, VN</span>
-            <span class="marquee-item"><span>🌸</span> Open to Work</span>
-            <span class="marquee-item"><span>✦</span> CopyLoad Extension</span>
         </div>
     </div>
+</section>
 
-    <!-- ===================== SKILLS ===================== -->
-    <section id="skills" class="skills">
-        <div class="section-banner reveal-up">
-            <span class="banner-emoji">⚡</span>
-            <span class="banner-label">KỸ NĂNG</span>
-            <span class="banner-emoji">⚡</span>
+<!-- ══════════════════════════════════════
+     SKILLS
+══════════════════════════════════════ -->
+<section id="skills" class="skills sec alt-bg">
+    <div class="sec-inner">
+        <div class="sec-label" data-anime="fadeUp">
+            <span class="sl-line"></span><span class="sl-text">KỸ NĂNG</span><span class="sl-emoji">⚡</span>
         </div>
-        <h2 class="section-heading reveal-up" data-delay="0.1">
-            Bộ sưu tập <span class="accent-text">vũ khí</span>
+        <h2 class="sec-title" data-anime="fadeUp" data-delay="80">
+            Bộ sưu tập<br><em>vũ khí</em>
         </h2>
-        <p class="section-desc reveal-up" data-delay="0.2">
-            Những công cụ tôi dùng để biến ý tưởng thành hiện thực
-        </p>
 
-        <div class="skills-grid">
-            <div class="skill-panel reveal-fade" data-delay="0">
-                <div class="skill-panel-header">
-                    <span class="panel-emoji">🎮</span>
-                    <h3>Game Development</h3>
+        <!-- 3 panels — slight vertical offset for asymmetry -->
+        <div class="skills-panels">
+            <div class="sk-panel sk-p1" data-anime="fadeUp" data-delay="0">
+                <div class="sk-head">
+                    <span class="sk-icon">🎮</span>
+                    <h3>Game Dev</h3>
                 </div>
-                <div class="skill-list">
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fab fa-unity"></i> Unity</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div>
-                        <span class="skill-bar-pct">90%</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fas fa-code"></i> C#</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div>
-                        <span class="skill-bar-pct">85%</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fas fa-puzzle-piece"></i> Game Design</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
-                        <span class="skill-bar-pct">80%</span>
-                    </div>
+                <div class="sk-bars">
+                    <div class="skb"><span class="skb-name"><i class="fab fa-unity"></i> Unity</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="90"></div></div><span class="skb-pct">90%</span></div>
+                    <div class="skb"><span class="skb-name"><i class="fas fa-code"></i> C#</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="85"></div></div><span class="skb-pct">85%</span></div>
+                    <div class="skb"><span class="skb-name"><i class="fas fa-puzzle-piece"></i> Game Design</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="80"></div></div><span class="skb-pct">80%</span></div>
                 </div>
             </div>
 
-            <div class="skill-panel reveal-fade" data-delay="0.15">
-                <div class="skill-panel-header">
-                    <span class="panel-emoji">🌐</span>
-                    <h3>Web Development</h3>
+            <div class="sk-panel sk-p2" data-anime="fadeUp" data-delay="120">
+                <div class="sk-head">
+                    <span class="sk-icon">🌐</span>
+                    <h3>Web Dev</h3>
                 </div>
-                <div class="skill-list">
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fab fa-html5"></i> HTML / CSS</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div>
-                        <span class="skill-bar-pct">85%</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fab fa-js"></i> JavaScript</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
-                        <span class="skill-bar-pct">80%</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fab fa-react"></i> React</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div>
-                        <span class="skill-bar-pct">70%</span>
-                    </div>
+                <div class="sk-bars">
+                    <div class="skb"><span class="skb-name"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="85"></div></div><span class="skb-pct">85%</span></div>
+                    <div class="skb"><span class="skb-name"><i class="fab fa-js"></i> JavaScript</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="80"></div></div><span class="skb-pct">80%</span></div>
+                    <div class="skb"><span class="skb-name"><i class="fab fa-react"></i> React</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="70"></div></div><span class="skb-pct">70%</span></div>
                 </div>
             </div>
 
-            <div class="skill-panel reveal-fade" data-delay="0.3">
-                <div class="skill-panel-header">
-                    <span class="panel-emoji">🛠️</span>
-                    <h3>Tools & Khác</h3>
+            <div class="sk-panel sk-p3" data-anime="fadeUp" data-delay="240">
+                <div class="sk-head">
+                    <span class="sk-icon">🛠️</span>
+                    <h3>Tools</h3>
                 </div>
-                <div class="skill-list">
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fab fa-git-alt"></i> Git / GitHub</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div>
-                        <span class="skill-bar-pct">85%</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fab fa-figma"></i> Figma</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div>
-                        <span class="skill-bar-pct">75%</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><i class="fas fa-paint-brush"></i> Photoshop</div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div>
-                        <span class="skill-bar-pct">70%</span>
-                    </div>
+                <div class="sk-bars">
+                    <div class="skb"><span class="skb-name"><i class="fab fa-git-alt"></i> Git/GitHub</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="85"></div></div><span class="skb-pct">85%</span></div>
+                    <div class="skb"><span class="skb-name"><i class="fab fa-figma"></i> Figma</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="75"></div></div><span class="skb-pct">75%</span></div>
+                    <div class="skb"><span class="skb-name"><i class="fas fa-paint-brush"></i> Photoshop</span>
+                        <div class="skb-track"><div class="skb-fill" data-pct="70"></div></div><span class="skb-pct">70%</span></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===================== STATS ===================== -->
-    <section class="stats-band">
-        <div class="stats-grid">
-            <div class="stat-bubble reveal-fade" data-delay="0">
-                <div class="stat-emoji">📦</div>
-                <h3 class="stat-num" data-target="50">0</h3>
-                <p>Projects trên GitHub</p>
-            </div>
-            <div class="stat-bubble reveal-fade" data-delay="0.1">
-                <div class="stat-emoji">🎮</div>
-                <h3 class="stat-num" data-target="10">0</h3>
-                <p>Game & App Projects</p>
-            </div>
-            <div class="stat-bubble reveal-fade" data-delay="0.2">
-                <div class="stat-emoji">📅</div>
-                <h3 class="stat-num" data-target="5">0</h3>
-                <p>Năm kinh nghiệm</p>
-            </div>
-            <div class="stat-bubble reveal-fade" data-delay="0.3">
-                <div class="stat-emoji">☕</div>
-                <h3 class="stat-num" data-target="9999">0</h3>
-                <p>Ly cà phê đã uống</p>
-            </div>
+<!-- ══ STATS BAND ══ -->
+<div class="stats-band">
+    <div class="stats-inner">
+        <div class="stat-item" data-anime="fadeUp" data-delay="0">
+            <span class="stat-em">📦</span>
+            <strong class="stat-n" data-target="50">0</strong>
+            <span>Projects trên GitHub</span>
         </div>
-    </section>
+        <div class="stat-div"></div>
+        <div class="stat-item" data-anime="fadeUp" data-delay="80">
+            <span class="stat-em">🎮</span>
+            <strong class="stat-n" data-target="10">0</strong>
+            <span>Game & App Projects</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item" data-anime="fadeUp" data-delay="160">
+            <span class="stat-em">📅</span>
+            <strong class="stat-n" data-target="5">0</strong>
+            <span>Năm kinh nghiệm</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-item" data-anime="fadeUp" data-delay="240">
+            <span class="stat-em">☕</span>
+            <strong class="stat-n" data-target="9999">0</strong>
+            <span>Ly cà phê ☕</span>
+        </div>
+    </div>
+</div>
 
-    <!-- ===================== JOURNEY / TIMELINE ===================== -->
-    <section id="journey" class="journey">
-        <div class="section-banner reveal-up">
-            <span class="banner-emoji">🗺️</span>
-            <span class="banner-label">HÀNH TRÌNH</span>
-            <span class="banner-emoji">🗺️</span>
+<!-- ══════════════════════════════════════
+     JOURNEY — Timeline
+══════════════════════════════════════ -->
+<section id="journey" class="journey sec">
+    <div class="sec-inner">
+        <div class="sec-label" data-anime="fadeUp">
+            <span class="sl-line"></span><span class="sl-text">HÀNH TRÌNH</span><span class="sl-emoji">🗺️</span>
         </div>
-        <h2 class="section-heading reveal-up" data-delay="0.1">
-            Con đường tôi đã <span class="accent-text">đi qua</span>
+        <h2 class="sec-title" data-anime="fadeUp" data-delay="80">
+            Con đường<br><em>đã đi qua</em>
         </h2>
-        <p class="section-desc reveal-up" data-delay="0.2">
-            Từ một cậu bé yêu game đến một Solo Indie Game Developer
-        </p>
 
         <div class="timeline">
-            <div class="timeline-rail"></div>
+            <div class="tl-rail"></div>
 
-            <div class="timeline-node reveal-side" data-side="left">
-                <div class="node-dot"></div>
-                <div class="node-card">
-                    <span class="node-date">2002</span>
-                    <h3 class="node-title">🌱 Khởi đầu</h3>
+            <div class="tl-node left" data-anime="slideLeft">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <span class="tl-year">2002</span>
+                    <h3>🌱 Khởi đầu</h3>
                     <p>Sinh ngày 20/06/2002, từ nhỏ đã say mê thế giới game và những câu chuyện điện tử.</p>
                 </div>
             </div>
 
-            <div class="timeline-node reveal-side" data-side="right">
-                <div class="node-dot"></div>
-                <div class="node-card">
-                    <span class="node-date">Tuổi thơ</span>
-                    <h3 class="node-title">🎮 Đam mê gaming</h3>
-                    <p>Từ nhỏ đã yêu thích game, dành hàng giờ để khám phá và ước mơ một ngày tự tay tạo ra game của riêng mình.</p>
+            <div class="tl-node right" data-anime="slideRight">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <span class="tl-year">Tuổi thơ</span>
+                    <h3>🎮 Đam mê gaming</h3>
+                    <p>Dành hàng giờ khám phá game và ước mơ một ngày tự tay tạo ra game của riêng mình.</p>
                 </div>
             </div>
 
-            <div class="timeline-node reveal-side" data-side="left">
-                <div class="node-dot"></div>
-                <div class="node-card">
-                    <span class="node-date">Học tập</span>
-                    <h3 class="node-title">💻 Bước vào lập trình</h3>
-                    <p>Bắt đầu học lập trình, khám phá Unity và C#. Biến niềm đam mê game thành công việc thực sự.</p>
+            <div class="tl-node left" data-anime="slideLeft">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <span class="tl-year">Học tập</span>
+                    <h3>💻 Bước vào lập trình</h3>
+                    <p>Bắt đầu học Unity và C#, biến niềm đam mê game thành công việc thực sự.</p>
                 </div>
             </div>
 
-            <div class="timeline-node reveal-side" data-side="right">
-                <div class="node-dot"></div>
-                <div class="node-card">
-                    <span class="node-date">Indie</span>
-                    <h3 class="node-title">🏰 AntChill Studio</h3>
-                    <p>Thành lập AntChill Studio (Game1Minh) — studio game indie cá nhân. Mỗi dòng code là một bước đến gần hơn với ước mơ.</p>
+            <div class="tl-node right" data-anime="slideRight">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <span class="tl-year">Indie</span>
+                    <h3>🏰 AntChill Studio</h3>
+                    <p>Thành lập AntChill Studio (Game1Minh) — studio game indie cá nhân, nơi ước mơ được nuôi dưỡng.</p>
                 </div>
             </div>
 
-            <div class="timeline-node reveal-side" data-side="left">
-                <div class="node-dot"></div>
-                <div class="node-card">
-                    <span class="node-date">2024</span>
-                    <h3 class="node-title">🚀 Mở rộng kỹ năng</h3>
-                    <p>Phát triển CopyLoad Extension cho Chrome & Edge, mở rộng sang web development và browser extensions.</p>
+            <div class="tl-node left" data-anime="slideLeft">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <span class="tl-year">2024</span>
+                    <h3>🚀 Mở rộng kỹ năng</h3>
+                    <p>Phát triển CopyLoad Extension (Chrome/Edge), mở rộng sang web dev và browser extensions.</p>
                 </div>
             </div>
 
-            <div class="timeline-node reveal-side" data-side="right">
-                <div class="node-dot"></div>
-                <div class="node-card">
-                    <span class="node-date">Hiện tại</span>
-                    <h3 class="node-title">🔍 Tìm kiếm cơ hội</h3>
-                    <p>Đang sống tại Đà Nẵng, chật vật tìm việc trong ngành Game Development. Mở cho cả remote và onsite.</p>
-                    <div class="node-badge"><span class="status-glow"></span> Available for work</div>
+            <div class="tl-node right" data-anime="slideRight">
+                <div class="tl-dot tl-dot-active"></div>
+                <div class="tl-card tl-card-active">
+                    <span class="tl-year">Hiện tại</span>
+                    <h3>🔍 Tìm kiếm cơ hội</h3>
+                    <p>Đang sống tại Đà Nẵng, chật vật tìm việc trong Game Development. Remote / onsite đều OK.</p>
+                    <div class="tl-badge"><span class="online-dot"></span> Available for work</div>
                 </div>
             </div>
 
-            <div class="timeline-node reveal-side" data-side="left">
-                <div class="node-dot future-dot"></div>
-                <div class="node-card future-card">
-                    <span class="node-date future-date">Tương lai</span>
-                    <h3 class="node-title">🏯 AAA Game Việt Nam</h3>
-                    <p>Tầm nhìn lớn nhất: Tiên phong tạo ra tựa game AAA đầu tiên của Việt Nam dựa trên nền tảng lịch sử và văn hóa dân tộc.</p>
+            <div class="tl-node left" data-anime="slideLeft">
+                <div class="tl-dot tl-dot-future"></div>
+                <div class="tl-card tl-card-future">
+                    <span class="tl-year tl-year-future">Tương lai</span>
+                    <h3>🏯 AAA Game Việt Nam</h3>
+                    <p>Tiên phong tạo ra tựa game AAA đầu tiên của Việt Nam về lịch sử và văn hóa dân tộc.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===================== PROJECTS ===================== -->
-    <section id="projects" class="projects">
-        <div class="section-banner reveal-up">
-            <span class="banner-emoji">🎨</span>
-            <span class="banner-label">DỰ ÁN</span>
-            <span class="banner-emoji">🎨</span>
+<!-- ══════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════ -->
+<section id="projects" class="projects sec alt-bg">
+    <div class="sec-inner">
+        <div class="sec-label" data-anime="fadeUp">
+            <span class="sl-line"></span><span class="sl-text">DỰ ÁN</span><span class="sl-emoji">🎨</span>
         </div>
-        <h2 class="section-heading reveal-up" data-delay="0.1">
-            Các tác phẩm <span class="accent-text">tiêu biểu</span>
+        <h2 class="sec-title" data-anime="fadeUp" data-delay="80">
+            Các tác phẩm<br><em>tiêu biểu</em>
         </h2>
-        <p class="section-desc reveal-up" data-delay="0.2">
-            Mỗi dự án là một câu chuyện, mỗi sản phẩm là một hành trình
-        </p>
 
         <div class="projects-grid">
-            <article class="project-card reveal-fade" data-delay="0">
-                <div class="project-thumb" style="--thumb-grad: linear-gradient(135deg, #ff6b6b, #ffd93d);">
-                    <div class="thumb-icon">📋</div>
-                    <div class="thumb-overlay">
-                        <a href="https://anhhackta.github.io/CopyLoad-Extension/" target="_blank" class="thumb-link"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="https://github.com/anhhackta/CopyLoad-Extension" target="_blank" class="thumb-link"><i class="fab fa-github"></i></a>
+            <!-- Card 1 -->
+            <article class="pj-card" data-anime="fadeUp" data-delay="0">
+                <div class="pj-thumb" style="--tc:linear-gradient(135deg,#ff6b6b,#ffd93d)">
+                    <span class="pj-emoji">📋</span>
+                    <div class="pj-overlay">
+                        <a href="https://anhhackta.github.io/CopyLoad-Extension/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/anhhackta/CopyLoad-Extension" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <div class="project-body">
-                    <div class="project-tags">
-                        <span class="tag-chip">JavaScript</span>
-                        <span class="tag-chip">Chrome Extension</span>
-                        <span class="tag-chip">IndexedDB</span>
-                    </div>
-                    <h3 class="project-name">CopyLoad Extension</h3>
-                    <p class="project-blurb">
-                        Clipboard history manager cho Chrome & Edge. Lưu trữ lịch sử copy/paste
-                        (text & images), Paste Multi, PIN lock, và encrypted export. 100% local-first.
-                    </p>
-                    <div class="project-feats">
+                <div class="pj-body">
+                    <div class="pj-tags"><span>JavaScript</span><span>Chrome Ext</span><span>IndexedDB</span></div>
+                    <h3>CopyLoad Extension</h3>
+                    <p>Clipboard history manager — text & images, Paste Multi, PIN lock, encrypted export. 100% local-first.</p>
+                    <div class="pj-feats">
                         <span><i class="fas fa-lock"></i> Local</span>
                         <span><i class="fas fa-shield-alt"></i> PIN</span>
                         <span><i class="fas fa-file-export"></i> Export</span>
@@ -584,176 +584,155 @@
                 </div>
             </article>
 
-            <article class="project-card reveal-fade" data-delay="0.12">
-                <div class="project-thumb" style="--thumb-grad: linear-gradient(135deg, #a55eea, #ff9ff3);">
-                    <div class="thumb-icon">🎮</div>
-                    <div class="thumb-overlay">
-                        <a href="https://anhhackta.github.io/AntChill/" target="_blank" class="thumb-link"><i class="fas fa-external-link-alt"></i></a>
+            <!-- Card 2 -->
+            <article class="pj-card" data-anime="fadeUp" data-delay="100">
+                <div class="pj-thumb" style="--tc:linear-gradient(135deg,#a55eea,#ff9ff3)">
+                    <span class="pj-emoji">🎮</span>
+                    <div class="pj-overlay">
+                        <a href="https://anhhackta.github.io/AntChill/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="project-body">
-                    <div class="project-tags">
-                        <span class="tag-chip">Unity</span>
-                        <span class="tag-chip">Game Dev</span>
-                        <span class="tag-chip">Indie</span>
-                    </div>
-                    <h3 class="project-name">AntChill Studio</h3>
-                    <p class="project-blurb">
-                        Trang giới thiệu studio game indie cá nhân. Nơi tôi chia sẻ về đam mê
-                        gaming và hành trình biến niềm đam mê thành công việc.
-                    </p>
-                    <div class="project-feats">
+                <div class="pj-body">
+                    <div class="pj-tags"><span>Unity</span><span>Game Dev</span><span>Indie</span></div>
+                    <h3>AntChill Studio</h3>
+                    <p>Studio game indie cá nhân. Nơi đam mê gaming và hành trình biến niềm đam mê thành công việc.</p>
+                    <div class="pj-feats">
                         <span><i class="fas fa-gamepad"></i> Studio</span>
                         <span><i class="fas fa-heart"></i> Indie Dev</span>
                     </div>
                 </div>
             </article>
 
-            <article class="project-card reveal-fade" data-delay="0.24">
-                <div class="project-thumb" style="--thumb-grad: linear-gradient(135deg, #4ecdc4, #45b7d1);">
-                    <div class="thumb-icon">📁</div>
-                    <div class="thumb-overlay">
-                        <a href="https://anhhackta.github.io/hoangportfolio/" target="_blank" class="thumb-link"><i class="fas fa-external-link-alt"></i></a>
+            <!-- Card 3 -->
+            <article class="pj-card" data-anime="fadeUp" data-delay="200">
+                <div class="pj-thumb" style="--tc:linear-gradient(135deg,#4ecdc4,#45b7d1)">
+                    <span class="pj-emoji">🌐</span>
+                    <div class="pj-overlay">
+                        <a href="https://anhhackta.github.io/hoangportfolio/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="project-body">
-                    <div class="project-tags">
-                        <span class="tag-chip">HTML/CSS</span>
-                        <span class="tag-chip">JavaScript</span>
-                        <span class="tag-chip">Responsive</span>
-                    </div>
-                    <h3 class="project-name">Portfolio Website</h3>
-                    <p class="project-blurb">
-                        Website portfolio cá nhân trước đây, showcase các dự án và kỹ năng
-                        của tôi trong lĩnh vực game development và web development.
-                    </p>
-                    <div class="project-feats">
+                <div class="pj-body">
+                    <div class="pj-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Responsive</span></div>
+                    <h3>Portfolio Website</h3>
+                    <p>Website portfolio cá nhân trước đây, showcase các dự án và kỹ năng trong lĩnh vực game & web development.</p>
+                    <div class="pj-feats">
                         <span><i class="fas fa-palette"></i> Design</span>
                         <span><i class="fas fa-mobile-alt"></i> Responsive</span>
                     </div>
                 </div>
             </article>
 
-            <article class="project-card reveal-fade" data-delay="0.36">
-                <div class="project-thumb" style="--thumb-grad: linear-gradient(135deg, #f0932b, #ff6b6b);">
-                    <div class="thumb-icon">🐙</div>
-                    <div class="thumb-overlay">
-                        <a href="https://github.com/anhhackta" target="_blank" class="thumb-link"><i class="fab fa-github"></i></a>
+            <!-- Card 4 -->
+            <article class="pj-card" data-anime="fadeUp" data-delay="300">
+                <div class="pj-thumb" style="--tc:linear-gradient(135deg,#f0932b,#ff6b6b)">
+                    <span class="pj-emoji">🐙</span>
+                    <div class="pj-overlay">
+                        <a href="https://github.com/anhhackta" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <div class="project-body">
-                    <div class="project-tags">
-                        <span class="tag-chip">Open Source</span>
-                        <span class="tag-chip">GitHub</span>
-                    </div>
-                    <h3 class="project-name">Xem thêm trên GitHub</h3>
-                    <p class="project-blurb">
-                        Khám phá thêm các dự án khác trên GitHub của tôi, bao gồm game projects,
-                        tools, và experiments với các công nghệ mới.
-                    </p>
-                    <div class="project-feats">
+                <div class="pj-body">
+                    <div class="pj-tags"><span>Open Source</span><span>GitHub</span></div>
+                    <h3>Xem thêm trên GitHub</h3>
+                    <p>Khám phá thêm các dự án khác: game projects, tools, và experiments với công nghệ mới.</p>
+                    <div class="pj-feats">
                         <span><i class="fab fa-github"></i> Repos</span>
                         <span><i class="fas fa-code-branch"></i> Open Source</span>
                     </div>
                 </div>
             </article>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===================== CONTACT ===================== -->
-    <section id="contact" class="contact">
-        <div class="section-banner reveal-up">
-            <span class="banner-emoji">💌</span>
-            <span class="banner-label">LIÊN HỆ</span>
-            <span class="banner-emoji">💌</span>
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section id="contact" class="contact sec">
+    <div class="sec-inner">
+        <div class="sec-label" data-anime="fadeUp">
+            <span class="sl-line"></span><span class="sl-text">LIÊN HỆ</span><span class="sl-emoji">💌</span>
         </div>
-        <h2 class="section-heading reveal-up" data-delay="0.1">
-            Hãy <span class="accent-text">kết nối</span> với tôi
+        <h2 class="sec-title" data-anime="fadeUp" data-delay="80">
+            Hãy <em>kết nối</em><br>với tôi
         </h2>
-        <p class="section-desc reveal-up" data-delay="0.2">
-            Đang tìm kiếm cơ hội việc làm trong lĩnh vực Game Development (remote hoặc onsite tại Đà Nẵng)
+        <p class="sec-sub" data-anime="fadeUp" data-delay="160">
+            Tìm kiếm cơ hội Game Development (remote hoặc onsite Đà Nẵng)
         </p>
 
         <div class="contact-grid">
-            <div class="contact-cards reveal-side" data-side="left">
-                <a href="mailto:bahoangcran@gmail.com" class="contact-tile">
-                    <div class="tile-icon" style="--tile-color: #ff6b6b;"><i class="fas fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <p>bahoangcran@gmail.com</p>
+            <!-- Left: info tiles -->
+            <div class="ct-info" data-anime="slideLeft">
+                <a href="mailto:bahoangcran@gmail.com" class="ct-tile">
+                    <div class="ct-icon" style="--ic:#ff6b6b"><i class="fas fa-envelope"></i></div>
+                    <div><h4>Email</h4><p>bahoangcran@gmail.com</p></div>
                 </a>
-                <div class="contact-tile">
-                    <div class="tile-icon" style="--tile-color: #4ecdc4;"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Vị trí</h3>
-                    <p>Đà Nẵng, Việt Nam</p>
+                <div class="ct-tile">
+                    <div class="ct-icon" style="--ic:#4ecdc4"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><h4>Vị trí</h4><p>Đà Nẵng, Việt Nam</p></div>
                 </div>
-                <div class="contact-tile">
-                    <div class="tile-icon" style="--tile-color: #ffd93d;"><i class="fas fa-briefcase"></i></div>
-                    <h3>Trạng thái</h3>
-                    <p>Đang tìm việc</p>
-                    <div class="contact-status"><span class="status-glow"></span> Available</div>
+                <div class="ct-tile">
+                    <div class="ct-icon" style="--ic:#ffd93d"><i class="fas fa-briefcase"></i></div>
+                    <div>
+                        <h4>Trạng thái</h4>
+                        <p>Đang tìm việc</p>
+                        <div class="ct-status"><span class="online-dot"></span> Available</div>
+                    </div>
+                </div>
+                <!-- Social links -->
+                <div class="ct-socials">
+                    <a href="https://github.com/anhhackta" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.facebook.com/anhhackta.official" target="_blank"><i class="fab fa-facebook"></i><span>Facebook</span></a>
+                    <a href="https://www.youtube.com/@anhhackta" target="_blank"><i class="fab fa-youtube"></i><span>YouTube</span></a>
                 </div>
             </div>
 
-            <div class="contact-form-wrap reveal-side" data-side="right">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-field">
-                        <label for="name">Tên của bạn</label>
-                        <input type="text" id="name" name="name" required placeholder="Nguyễn Văn A">
+            <!-- Right: form -->
+            <div class="ct-form-wrap" data-anime="slideRight">
+                <form id="contactForm" class="ct-form">
+                    <div class="cf-field">
+                        <label>Tên của bạn</label>
+                        <input type="text" name="name" required placeholder="Nguyễn Văn A">
                     </div>
-                    <div class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="email@example.com">
+                    <div class="cf-field">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="email@example.com">
                     </div>
-                    <div class="form-field">
-                        <label for="subject">Tiêu đề</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Cơ hội việc làm">
+                    <div class="cf-field">
+                        <label>Tiêu đề</label>
+                        <input type="text" name="subject" required placeholder="Cơ hội việc làm...">
                     </div>
-                    <div class="form-field">
-                        <label for="message">Lời nhắn</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Tôi muốn trao đổi về..."></textarea>
+                    <div class="cf-field">
+                        <label>Lời nhắn</label>
+                        <textarea name="message" rows="4" required placeholder="Tôi muốn trao đổi về..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <span>Gửi tin nhắn</span>
-                        <i class="fas fa-paper-plane"></i>
+                    <button type="submit" class="btn-main w100">
+                        Gửi tin nhắn <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="contact-socials reveal-up">
-            <h3>Hoặc tìm tôi tại</h3>
-            <div class="social-row">
-                <a href="https://github.com/anhhackta" target="_blank" rel="noopener" class="social-chip">
-                    <i class="fab fa-github"></i><span>GitHub</span>
-                </a>
-                <a href="https://www.facebook.com/anhhackta.official" target="_blank" rel="noopener" class="social-chip">
-                    <i class="fab fa-facebook"></i><span>Facebook</span>
-                </a>
-                <a href="https://www.youtube.com/@anhhackta" target="_blank" rel="noopener" class="social-chip">
-                    <i class="fab fa-youtube"></i><span>YouTube</span>
-                </a>
-            </div>
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <p class="footer-brand">NBH — Nguyễn Bá Hoàng</p>
+            <p>© 2024 · Made with <i class="fas fa-heart"></i> & <i class="fas fa-mug-hot"></i></p>
         </div>
-    </section>
+        <a href="#hero" class="footer-top">
+            <i class="fas fa-arrow-up"></i> Về đầu trang
+        </a>
+    </div>
+</footer>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-left">
-                <p>© 2024 Nguyễn Bá Hoàng — All rights reserved.</p>
-                <p class="footer-made">Làm với <i class="fas fa-heart"></i> & <i class="fas fa-mug-hot"></i></p>
-            </div>
-            <a href="#top" class="footer-up">
-                <i class="fas fa-arrow-up"></i><span>Về đầu trang</span>
-            </a>
-        </div>
-    </footer>
-
-    <!-- ===================== SCRIPTS ===================== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-    <script src="assets/js/script.js"></script>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
+

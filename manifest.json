@@ -1,0 +1,17 @@
+{
+  "name": "Nguyễn Bá Hoàng — Portfolio",
+  "short_name": "Hoàng Gallery",
+  "description": "Solo Game Developer | Unity C# Developer | Đà Nẵng, Vietnam",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf6ec",
+  "theme_color": "#ff6b6b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='48' fill='%23ff6b6b'/><text x='96' y='140' font-size='115' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>H</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    }
+  ]
+}
